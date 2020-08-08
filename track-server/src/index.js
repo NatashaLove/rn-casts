@@ -1,4 +1,4 @@
-require('./models/User');
+require('./models/User');//created objects
 require('./models/Track');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -13,9 +13,11 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(trackRoutes);
 
-const mongoUri =
-  'mongodb+srv://admin:passwordpassword@cluster0-8fzga.mongodb.net/test?retryWrites=true&w=majority';
-mongoose.connect(mongoUri, {
+    const mongoUri =
+    // mongodb+srv://<username>:<password>@cluster0-pz16w.mongodb.net/<dbname>?retryWrites=true&w=majority
+      //'mongodb+srv://p00gz:JyKbVf7l6ATUk54h@emaily-uwsj6.mongodb.net/natasha?retryWrites=true';
+      'mongodb+srv://natalia:mW48H4vJK6tHQENz@cluster0-pz16w.mongodb.net/natasha?retryWrites=true&w=majority';
+  mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useCreateIndex: true
 });
